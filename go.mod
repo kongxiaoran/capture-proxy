@@ -1,4 +1,4 @@
-module github.com/kongxr/capture-proxy
+module github.com/kongxiaoran/capture-proxy
 
 go 1.16
 
