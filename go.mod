@@ -1,4 +1,4 @@
-module github.com/kxg3030/shermie-proxy
+module github.com/kongxr/capture-proxy
 
 go 1.16
 
