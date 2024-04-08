@@ -40,7 +40,7 @@ func (i *Certificate) Init() error {
 	// 如果根证书不存在,则生成
 	if !Utils.FileExist(certFile) {
 		// 生成根pem文件
-		certBlock, keyBlock, err = i.GenerateRootPemFile("Shermie")
+		certBlock, keyBlock, err = i.GenerateRootPemFile("FinChina-Capture-Util")
 		if err != nil {
 			return fmt.Errorf("生成根证书文件失败：%w", err)
 		}
@@ -76,9 +76,9 @@ func (i *Certificate) GeneratePem(host string) ([]byte, []byte, error) {
 			Country:            []string{"CN"},         // 证书所属的国家
 			Organization:       []string{"company"},    // 证书存放的公司名称
 			OrganizationalUnit: []string{"department"}, // 证书所属的部门名称
-			Province:           []string{"BeiJing"},    // 证书签发机构所在省
+			Province:           []string{"AnHui"},      // 证书签发机构所在省
 			CommonName:         host,
-			Locality:           []string{"BeiJing"}, // 证书签发机构所在市
+			Locality:           []string{"HeFei"}, // 证书签发机构所在市
 		},
 		NotBefore:             time.Now().AddDate(-1, 0, 0),
 		NotAfter:              time.Now().AddDate(1, 0, 0),
@@ -125,9 +125,9 @@ func (i *Certificate) GenerateRootPemFile(host string) (*pem.Block, *pem.Block, 
 			Country:            []string{"CN"},         // 证书所属的国家
 			Organization:       []string{"company"},    // 证书存放的公司名称
 			OrganizationalUnit: []string{"department"}, // 证书所属的部门名称
-			Province:           []string{"BeiJing"},    // 证书签发机构所在省
+			Province:           []string{"AnHui"},      // 证书签发机构所在省
 			CommonName:         host,
-			Locality:           []string{"BeiJing"}, // 证书签发机构所在市
+			Locality:           []string{"HeFei"}, // 证书签发机构所在市
 		},
 		NotBefore:             time.Now().AddDate(-1, 0, 0),
 		NotAfter:              time.Now().AddDate(1, 0, 0),
